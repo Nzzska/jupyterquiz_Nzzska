@@ -93,7 +93,7 @@ def display_quiz(ref, num=1_000_000, shuffle_questions=False, shuffle_answers=Tr
         else:
             #print("File detected")
             script += f"var questions{div_id}="
-            with open(ref) as file:
+            with open(ref, encoding='utf-8') as file:
                 for line in file:
                     script += line
             static = True
